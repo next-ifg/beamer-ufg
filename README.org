@@ -1,0 +1,29 @@
+
+#+TITLE: Tema do /Beamer/ para apresentações -- UFG (EMC)
+#+DATE: <2017-08-29 ter>
+#+AUTHOR: Pedro Maione
+#+EMAIL: pedromaionee@gmail.com
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t c:nil
+#+OPTIONS: creator:comment d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t
+#+OPTIONS: num:t p:nil pri:nil stat:t tags:t tasks:t tex:t timestamp:t toc:t
+#+OPTIONS: todo:t |:t
+#+CREATOR: Emacs 25.2.1 (Org mode 8.2.10)
+#+DESCRIPTION: Tema para o beamer.
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: pt_br
+#+SELECT_TAGS: export
+
+
+O Beamer é uma classe do LaTeX para criação de apresentações em formato PDF. Sua
+estrutura é a mesma do LaTeX, com algumas características específicas do
+Beamer. É possível desenvolver apresentações dinâmicas com sobreposições e
+transiçcões animadas entre os quadros.
+
+Mais informações sobre a classe beamer podem ser encontradas em [[http://mirrors.ctan.org/macros/latex/contrib/beamer/doc/beameruserguide.pdf][Beamer User Guide]]. 
+
+Este é o modelo para apresentações da Escola de Engenharia Elétrica, Mecânica e de Computação (EMC) da Universidade Federal de Goiás (UFG). e está disponível em [[https:github.com/next-ifg/beamer-ufg.git]].
+
+Para informar algum /bug/, erro ou melhoria; utilize o /issue tracker/ do github.
+
+
