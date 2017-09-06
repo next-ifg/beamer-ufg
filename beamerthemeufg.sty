@@ -26,7 +26,6 @@
 
 \RequirePackage{graphicx}
 
-
 \usetikzlibrary{mindmap,backgrounds,positioning,calc}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{shapes.misc}
@@ -66,6 +65,8 @@
 % \newcommand{\rightTextArrow}{ $rightarrow$ }
 % \newcommand{\quoted}[1]{>#1<}
 % \newcommand{\doublequoted}[1]{>>#1<<}
+
+\newcommand{\Orientador}[1]{\gdef\@Orientador{#1}}
 
 % ---------------------------------------------------------------------
 % Itemize
@@ -185,7 +186,7 @@
 
 \renewcommand\UrlFont{\sffamily\bfseries}
 % Titlepage
-\setbeamerfont{title}{family=\sffamily,size=\fontsize{20}{20}}
+\setbeamerfont{title}{family=\sffamily,size=\fontsize{16}{18}}
 \setbeamerfont{subtitle}{family=\sffamily,size=\fontsize{12}{14}}
 \setbeamerfont{date}{size=\fontsize{8}{10}}
 \setbeamerfont{author}{size=\fontsize{12}{15}}
@@ -220,13 +221,16 @@
     \node at (current page.center) {%
       \begin{minipage}[t][\paperheight]{\textwidth}
         \vspace*{5mm}
-        \null%
-        \includegraphics[height=15mm]{./logo-ufg-inline}%
-        % 
-        \hfill%
-        \includegraphics[height=15mm]{./logo-emc}%
-        \hspace*{4mm}%
-        \par%
+
+        \begin{minipage}[c]{.97\linewidth}
+          \centering
+          \hspace{-3mm}
+          \raisebox{-0.5\height}{\includegraphics[height=14mm]{./logo-ufg-inline}}
+          \hspace{\stretch{1}}
+          \raisebox{-0.5\height}{\includegraphics[height=7mm]{./logo-next}}
+          \hspace{\stretch{1}}
+          \raisebox{-0.5\height}{\includegraphics[height=13mm]{./logo-emc}}
+        \end{minipage}
 
         \vspace*{2em}
         \ifx\inserttitle\@empty%
@@ -265,7 +269,8 @@
         {%
           \usebeamerfont{author}%
           \usebeamercolor[fg]{author}%
-          \insertauthor\par%
+          \emph{Discente:} \insertauthor\par%
+          \emph{Orientador:} \@Orientador\par%
         }%
         
         \fi%
@@ -482,6 +487,7 @@
     };%
   \end{tikzpicture}
 }
+
 
 
 \mode<all>
